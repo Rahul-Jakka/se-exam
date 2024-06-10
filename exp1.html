@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<form id = "registrationForm">
+		<input type="text" id = "name" name="Name" placeholder = "name" required><br>
+		<input type="password" id = "password" name= "Password" placeholder="password"><br>
+		<input type="submit" value="Register">
+	</form>
+	<div id = "successMessage" style = "display:none;">
+		<p>Registration Successful </p></div>
+
+		<script>
+			document.getElementById("registrationForm").addEventListener("submit",
+				function(event){
+					event.preventDefault();
+					document.getElementById("successMessage").style.display = "block";
+					document.getElementById("registrationForm").reset();
+				});
+		</script>
+</body>
+</html>
